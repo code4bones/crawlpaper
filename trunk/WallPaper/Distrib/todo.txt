@@ -1,0 +1,56 @@
+- far partire in automatico il download per drop di url mp3 pls come questa sulla main window: http://www.madcracker.com/music/dj-jayt-tell-no-lie-23-03-06.mp3
+- inviare i cookies anche con il ripper audio
+- gestire scambio http compresso (gzip)
+- verificare se e quando eliminare il file per click su stop/cancel durante il download
+- crawler: se in script mode (con il crawler) mettere da qualche parte una percentuale di avanzamento sullo script
+- audio: gestire drag & drop url .pls/.m3u/etc. su main window (stoppare ripping corrente e aprire il nuovo)
+- gestire possibilita' per cui i .pls/.m3u contengano nomi file .mp3 invece che indirizzi di servers (vedi sotto)
+#EXTM3U
+#EXTINF:303,Zero7  - Give It Away
+\Music\Zero7 - Give It Away.mp3
+#EXTINF:233,Amon Tobin  - Easy Muffin
+\Music\Amon Tobin - Easy Muffin.mp3
+#EXTINF:401,Faithless  - Tarantula
+\Music\Faithless - Tarantula.mp3
+#EXTINF:253,Mr.electric Triangle (Heart)  - Is The 'erb Dope?
+\Music\Mrelectric Triangle (Heart) - Is The 'erb Dope.mp3
+
+[playlist]
+File1=\Music\Zero7 - Give It Away.mp3
+Title1=Zero7  - Give It Away
+Length1=303
+File2=\Music\Amon Tobin - Easy Muffin.mp3
+Title2=Amon Tobin  - Easy Muffin
+Length2=233
+File3=\Music\Faithless - Tarantula.mp3
+Title3=Faithless  - Tarantula
+Length3=401
+File4=\Music\Mrelectric Triangle (Heart) - Is The 'erb Dope.mp3
+Title4=Mr.electric Triangle (Heart)  - Is The 'erb Dope?
+Length4=253
+NumberOfEntries=4
+Version=2
+
+playlist: .m3u, .pls
+
+su main wnd:
+	file:
+		se file locale: apri e carica
+		se file remoto (http): scarica, apri e carica
+
+	contenuto:
+		se specifica stream server: lancia ripper, play audio
+		se specifica file:
+			se file locale: play audio
+			se file remoto (http): scarica, play audio
+
+su crawler wnd:
+	file:
+		se file locale: apri e carica
+		se file remoto (http): scarica, apri e carica
+
+	contenuto:
+		se specifica stream server: lancia ripper, play audio
+		se specifica file:
+			se file locale: play audio
+			se file remoto (http): scarica, play audio

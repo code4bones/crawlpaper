@@ -1,0 +1,38 @@
+
+FOLDERS/FILES FOR THE CURRENT RELEASE:
+======================================
+crawlpaper
+	4.2.4
+		wallpaper-fullbin.4.2.4.zip
+		wallpaper-src.4.2.4.zip
+
+external libraries
+	4.2.x
+		libraries-src-4.2.x.zip
+
+
+DESCRIPTION:
+============
+wallpaper-fullbin.4.2.4.zip
+	Win32 installer for the latest version (4.2.4), unzip it and 
+	run the executable (wallpaper-fullbin.4.2.4.exe) to install 
+	the latest version.
+	This release has been tested only on Windows Vista SP1, I 
+	suppose it would work on other win32 platforms too, if not 
+	just fill a bug report.
+	
+wallpaper-src.4.2.4.zip
+	The source code for the above package, not including the 
+	external libraries (libraries-src-4.2.x.zip, see below).
+	How to configure/compile/etc. the wallpaper source code is 
+	explained into the BUILD NOTES section of the readme.txt file 
+	you get once installed the latest version of the executable 
+	(wallpaper-fullbin.4.2.4.zip, see above)
+	
+libraries-src-4.2.x.zip
+	The source code for the external libraries, to be used with the 
+	above file (wallpaper-src.4.2.4.zip).
+	How to configure/compile/etc. the external libraries code is 
+	explained into the BUILD NOTES section of the readme.txt file 
+	you get once installed the latest version of the executable 
+	(wallpaper-fullbin.4.2.4.zip, see above)

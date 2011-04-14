@@ -1,0 +1,483 @@
+CHANGE LOG:
+
+4.2.4 (10/04/11)
+-----
+- any 'default.bmp' of 'default.jpg' file placed into the output directory of the stream ripper (the 
+  directory where the songs are ripped) will be displayed into the preview box of the crawler dialog 
+  during the stream ripping
+- fixed a bug about .m3u files parsing
+- fixed a bug about directory parsing/filename extension into the crawler
+- fixed some bugs related to HTTP/ICY header parsing into the picture/audio crawler
+- some changes to the crawler report
+- added the 'ask' option for unrecognized file types to the crawler settings, use it to be asked on the
+  fly if you want to download or not a file which is not present into the recognized file types list
+- added the 'never' option to the latest version check menu, if you select it the only way to check for
+  updates is manually selecting the 'check now' menu entry
+- fixed a bug about displaying the current/last version number during the latest version check
+- added the play button to the mp3 tags editor to play the current song
+- fixed a bug for the maximum allowed value for the timeout change (1440 -> 1 day)
+- fixed some bugs about playing the .cda (audio tracks) files, see the current readme.txt about MCI 
+  troubles
+- fixed a bug related to playing .wav files > 2GB
+- some changes into the (audio) crawler
+- added the 'file size' field to the audio balloon popup
+- added the 'Balloon Info...' entry to the popup menu of the tray icon of the audio player
+- added the 'Web Search...' entry to the popup menu of the tray icon of the audio player, also available 
+  when holding the CTRL key while cliking on audio tray icon
+- there are some configuration values (in the registry) which cannot be changed through the gui, change 
+  them manually of live with the defaults:
+    \HKEY_CURRENT_USER\Software\WallPaper\Install
+      LatestVersionCheckType = 1965=never, 0=at startup, >0=every x days
+    \HKEY_CURRENT_USER\Software\WallPaper\Options
+      CrawlerDefaultHtmlFileName = default .html filename ("index.html")
+      CrawlerDefaultMp3FileName = default .mp3 filename ("default.mp3")
+      CrawlerOpenReport = 1|0 (set to 1 to open the report after the crawling process)
+      CrawlerMaxThreads = n (max number of threads to be used during the multithreads crawling)
+      CrawlerThumbnailSize = n (to define the thumbnail/banner size)
+      CrawlerWinsockDelay = n (delay in ms between winsock send() and receive(), dont go under 500 or more 
+                              than 1500, the default is 1000)
+      FakeAudioUserAgent = "..." (fake audio user agent :)
+      PreferredInternetBrowser = allows NETSCAPE,IEXPLORE,FIREFOX,OPERA,CHROME
+      StreamRipperForceFakeUserAgent = 1|0 force the fake user agent
+      StreamRipperUninterruptedStreamsLimit = 26214400 bytes (25MB) limit for uninterrupted stream before 
+                                              add it to the playlist automatically, 0 means no limit
+
+4.2.3 (05/03/11)
+-----
+- changed/updated some icons
+- changed the behaviour of the preview window
+- when clicking on the baloon popup the main window doesnt get the focus as before
+- added a new hotkey (CTRL+ALT+BACKSPACE) to delete the current song from disk
+- removed the menu/desktop shortcuts for the WallBrowser.exe
+- minor bug fixing here and there
+- bug fix: the uninstall procedure now removes the WallBrowser key from the registry
+- fixed a bug about long filenames into the audio player
+- fixed a bug about downloading files > 2GB
+- fixed some bugs into the crawler report
+- fixed a bug about some default icons
+- fixed a bug about displaying a wrong download progress for files > 40MB into the crawler dialog
+- fixed a bug about the randomize option of the playlist
+- fixed a bug about displaying image info on the main window for pictures coming from http urls
+- fixed a bug about the image info displayed on the balloon popup
+- fixed a misplaced index for the default icons, if you still see wrong (blurry, resized) icons for
+  WallPaper and WallBrowser .exe try to rebuild your Windows icon cache (just Google 'how to rebuild
+  Windows icons cache', the procedure may vary depending on the Windows version you have installed)
+
+4.2.2 (20/02/11)
+-----
+- the about dialog now includes a soundtrack... :)
+- fixed a bug about displaying file infos on the main window
+- currently the preview window only loads infos about picture files
+- removed some annoying messages for file not found/extract error from the audio player code
+- restored and fixed the latest version check
+- small bug fix for the confirm file delete option
+- changed the audio/picture balloon popups
+- removed the "Browse Url(s) with a New Instance" option, now using a new instance by default
+- some bugs fixing for the code used to exec the Internet Browser
+- known bug (not fixed yet): there is no duplicate entry check for the items added to the playlist
+- known bug (not fixed yet): environment Windows Vista SP1: the WallPaper entries on the Explorer context
+  menu doesnt show for .mp3 files, no idea how to fix it
+- fixed bug: some WallPaper entries from the Explorer context menu may cause the program displaying
+  an error message about hotkeys registration
+- fixed bug: when displaying the image infos with the balloon popup after manipulating the picture
+  (stretch, fit, etc.) all the infos are about the manipulated image, not the original picture
+- fixed bug: when the main program starts the audio player doesnt play the last played song but 
+  restarts from the first song of the list
+- fixed bug: a GPF may occur while handling the linked list (CNodeList) with a specific kind of item
+- changed the code to load custom icons for audio/picture popups, now loading the 48x48 image as
+  preferred if found in the icon file or the bigger one if no 48x48 size present
+- changed the icons for the playlist
+- there are some configuration values (in the registry) which cannot be changed through the gui:
+  CrawlerOpenReport = 1|0 (set to 1 to open the report after the crawling process)
+  CrawlerMaxThreads = n (max number of threads to be used during the multithreads crawling)
+  CrawlerThumbnailSize = n (to define the thumbnail/banner size)
+  FakeAudioUserAgent = "..." (fake audio user agent :)
+  PreferredInternetBrowser = allows NETSCAPE,IEXPLORE,FIREFOX,OPERA,CHROME
+
+4.2.0 (31/01/11)
+-----
+- project restarted, note this is a test (beta) version
+- the project now compiles with Microsoft Visual Studio 2008 on Windows Vista SP1
+- fixed some bugs
+- removed/changed some options
+
+4.1.6 (17/01/05)
+-----
+- Project discontinued
+
+4.1.5m (25/07/04)
+-----
+- Celebrating the 4th anniversary (August 2004), more than 15.000 downloads! See the commemorative wallpaper
+  (Cravlpaper) on the web site - Thanks to all! (and to me...)
+- fixed a bug about proxy usage into the stream ripper
+- fixed a (serious) bug about the do not ask more message box (when called from a minimized windows, the
+  message box is never displayed, hanging the caller)
+- minor bug fixes
+
+4.1.5l (18/07/04)
+-----
+- added the code to catch exceptions during image loading
+- added the tile/stretch option to the draw mode - from user suggestion
+
+4.1.5i (22/06/04)
+-----
+- fixed a wrong design about wallpaper change when the timeout occurs - from user suggestion
+  when the timeout occurs and the program skips to the next item of the playlist, if such item is an
+  audio file the current wallpaper is not changed - as example, if you have 5 audio files before a
+  picture file, you must wait for 5 timeouts for the next wallpaper change - now the program automatically
+  skips all non-picture files
+- fixed a bug about displaying grayscale jpeg - from user suggestion
+- fixed a potential bug about handling of compressed archives, not sure if there are more
+- really minor changes somewhere
+
+4.1.5h (14/06/04)
+-----
+- fixed more bugs about MFC's message handling (when removing all audio files after using the mp3 tag editor)
+- fixed a small bug about balloon popups into the audio player
+
+4.1.5g (03/06/04)
+-----
+- removed the Ctrl+<right/left arrow> key combinations to skip to prev/next file into the MP3 tag
+  editor (to avoid conflicts with the default combination for selecting text) - from user suggestion
+- added the Alt+M key into the MP3 tag editor to clear the comment field
+- minor bug fixes into the MP3 tag editor (about genre, skipping, etc.)
+- more bug fixes about sucking MFC message handling
+
+4.1.5f (31/05/04)
+-----
+- more (internal) changes on tooltips, also increased the delay time
+- fixed a bug about left/right arrow keys into the mp3 tag editor
+- added the 'do not show more' option to balloon tooltips for the main window, the mp3 tag editor and
+  the crawler - from user suggestion
+- fixed a bug about removing audio files coming from compressed archives (only for files with a pathname)
+- added two default bitmaps for picture taskbar popup
+- added the possibility to load taskbar popups also for pictures - from user suggestion
+- added the possibility to load balloon tooltips for pictures even without the tray icon
+- minor bug fixes
+- finished the porting of all the source code to the M$VC 7.0 (.NET) compiler
+
+4.1.5e (24/05/04)
+-----
+- fixed a memory leak into the download dialog
+- neutralized the M$ bug ("BUG: Modal Dialogs in MFC Regular DLL Cause ASSERT in AfxWndProc") changing to
+  the Microsoft Visual C++ .NET 2003, the only version of MFC which does not suck with the message handling
+- minor fixes for custom icons for balloon popups
+- fixed (?) a bug about the 302 http error code (moved) into the crawler
+- the about dialog is now closed when pressing any key - from user suggestion
+- the (file) download dialog now does not put itself as the foreground window - from user suggestion
+
+4.1.5d (17/05/04) - perfection is only reached at the point of collapse...
+-----
+- added the custom icon feature to the balloon popup (you can now load custom icons from the directory you choose)
+- fixed a small bug about the length of the channel mode string in the audio player
+- some (internal) fixes
+- added some keyboard shortcuts to the mp3 tag editor (the new key list is showed through the tooltips)
+- more changes to the mp3 tags editor
+- added the copy to... entry to the popup menu for the tray icon of the audio player
+- some icons changed
+
+4.1.5c (12/05/04)
+-----
+- fixed (?) a bug about caused by a known bug of M$: "BUG: Modal Dialogs in MFC Regular DLL Cause ASSERT in AfxWndProc"
+  such bug affects the release build too, causing a (random) exception when skipping to the next song
+- some (internal) changes to icons and tooltips
+
+4.1.5b (09/05/04)
+-----
+- fixed, modified and added some tooltips
+- enhanced the mp3 tag editor
+- fixed more bugs about text formatting for bitmap taskbat popups
+- fixed a bug about directories creation into the crawler
+- fixed a bug about urls which refers to a picture without specifying the file extension
+- added the 'clear history' button into the crawler options to clear the list of crawled urls
+- added two hotkeys (ctrl+shift+P and ctrl+shift+A) to add the current picture/song to the favourite playlist
+- fixed a bug about the number of downloaded pictures into the html report
+- minimal changes into crawler/ripper
+- minor changes and fixes into the html report for the crawler/ripper
+
+4.1.5a (06/05/04)
+-----
+- fixed a bug affecting the whole code (only when using taskbar audio popups)
+- fixed (?) the troubles with the crawler window, now Esc minimize and when done the window is automatically restored
+
+4.1.5(beta) (05/05/04)
+-----
+- changed the default mp3 taggin of the ripper (comment, genre and encoder fields)
+- added the 'picture pathname' option to the draw text mode - from user suggestion
+- added the mp3 tag editor, available from the popupmenu of the tray icon for the player
+- added the <genre> macro (%g) to the list used for taskbar audio popups (%t=title, etc.)
+- some change (added the [...] abbreviation) into tooltip text for tray icons and menu title
+- added two options to reload the current balloon tooltip
+- now handling F1 (and shift+F1) key(s) with a redirection to the (web) user guide
+- fixed (?) a bug about loading the last played item with audio files
+- changed (and fixed) the download dialog (for one file, not for the crawler)
+- changed the latest version check feature - from user suggestion
+- divided the options menu into popups menu to avoid an excessive height - from user suggestion
+- fixed a bug about url retrieval/robots.txt rules (if the first url is an object and not an html page,
+  the robots.txt rules are ignored)
+- fixed a bug about adding downloads on the fly to the playlist from the crawler (instead of adding the
+  entire downloaded directory at the end of the crawl, pictures and audio files are added as downloaded)
+- added the favourite playlist feature, for pictures and audio files
+- fixed a bug about pause/resume options
+
+4.1.4d (12/04/04)
+-----
+- some current focus (about main window) adjustment
+- fixed a bug (an exception) when pasting images from the clipboard
+- enabled the copy to clipboard option for picture files coming from compressed archives
+- pressing spacebar when the main windows has the focus toggles playing
+- some bug fixing
+- removed the cartoons menu
+- added (but still not used) the code for extended balloon tooltips
+- added balloon popup for wallpaper change
+- updated the (in)famous content
+- fixed a mismatched string compare (now ignoring case) causing wrong results in the whole project
+- added the move to... entry to the popup menu for the tray icon of the audio player
+- fixed a bug about the tooltip of the tray icon with an empty playlist
+- added an hotkey (Ctrl+Alt+R) for a random reorder of the current playlist
+- added an hotkey (Ctrl+Alt+U) to remove the current wallpaper from the desktop
+
+4.1.4c (05/04/04)
+-----
+- fixed a stupid but hateful bug (really a typo) affecting the whole project (about string comparision with ignore case)
+- added gridlines and foreground/background colors options for the main window
+- updated the libraries distribution file, now including the full package for every project (with docs and so on stuff)
+- some maccheroni-code cleaning
+- added the tooltips on the options dialogs - from user suggestion
+- the hotkey assignment is now configurable through the registry - from user suggestion
+- fixed a bug about opening html reports after crawling
+- added support for .rar files - from user suggestion
+- fixed a bug about layered effect
+- updated the graphics engine to the v.2.9.6 of NexgenIPL library
+- changed (re)distribution license from GPL to BSD
+- fixed the timeout value (5 secs) for the balloon tooltip
+- fixed a bug about keyboard shortcuts
+- changed some key assignment (CTRL+F8 now for uncompress and CTRL+F9 for the picture browser)
+- removed the compress option from tools menu, re-enabled the uncompress feature (CTRL+F8)
+
+4.1.4b (21/03/04)
+-----
+- added the comment macro (%c) to the list used for taskbar audio popups (%t=title, etc.)
+- added the cartoons balloon as audio popup option (only for win >= W2K/XP)
+- added the left/down and right/up options to the draw text feature
+- fixed a bug for the draw text feature about the taskbar position
+- fixed a bug about wallpaper resizing - from user suggestion
+- some spaghetti-code cleaning
+- removed a boring beep played when loading malformed wav files
+- fixed the behaviour of the 'open with associated program' menu entry 
+- fixed a bug about removing temporary files with the audio player
+- fixed a bug about playlist reordering (clicking on the column header causes an error for audio files contained into a zipped file)
+- more bug fixes into audio playlist
+- removed the print command from file menu
+
+4.1.4a (14/03/04)
+-----
+- fixed some (not all...) bugs for the rollup button of the caption bar
+- fixed a minor bug in the nervous title
+- fixed a bug about removing all audio files coming from the same .zip file
+- added 'don't ask me more' with the default (timeout) answer to some messagebox - from user suggestion
+- removed the paintlib library from the project
+- removed the internal http server
+- removed the capture tools
+- fixed some bugs about url retrieval from the main window - from user suggestion
+- removed the length limitation on the field of the add url dialog - from user suggestion
+- fixed a bug about using a proxy with the stream ripper
+- added .m3u playlist support (urls and local files) to the stream ripper - from user suggestion
+
+4.1.4 (07/03/04)
+-----
+- fixed a bug about playlist random reordering with audio files coming from a .zip file
+- clicking the menu title of the tray icon for the main window does a latest version check
+- clicking the menu title of the tray icon for the audio player re-plays the current song
+- with the 'change with one click...' option, pressing the shift key when clicking on the tray icon now goes to the previous item
+- the default install directory is now <your program files dir> + WallPaper - from user suggestion
+- now installing only for current user (under HKEY_CURRENT_USER instead of HKEY_LOCAL_MACHINE) - from user suggestion
+- the audio player now uses the same settings of the main window about deleting files
+- as usual (sic!) more bug fixes into playlist code about items coming from .zip files
+- fixed a bug about 'open with...' from the shell menu
+- fixed a really stupid bug about shortcuts/menu entries creation during install
+- fixed a stupid bug about pause/resume options with the tray icon
+
+4.1.3f (27/02/04)
+-----
+- full installer release of the previous patches
+
+4.1.3e (26/02/04) - patch
+-----
+- fixed a REALLY ENORMOUS bug about retrieving urls when the program is compiled in release (not debug) mode
+- more bug fixes into the playlist about audio files coming from a .zip file
+- more bug fixes for the crawler (into the stream ripper module)
+
+4.1.3d (24/02/04) - patch - I know, a lot of bugs, but more options you have, more bugs you get...
+-----
+- known bug: removing from the playlist an audio file coming from a .zip file does not remove it from the
+  audio playlist if this file is currently playing
+- temporarily disabled compress/uncompress entries of the tools menu
+- some (not all) bug fix about removing one or all items from a .zip file containing audio files
+- fixed (once an for all...?) the audio player playlist bug/mismatch due to the auto reusing for the items of the list
+- fixed a bug about displaying items in main window (items exists but are not showed)
+- more bug fixes with the playlist about .zip files containing audio files
+- fixed a boring bug about very long (> 256) pathnames for the playlist items
+- changed the clear temporary files options (now with three modes) - from user suggestion
+- more bug fixes into the crawler
+- fixed the bugged menu title for the popup menu of the tray icon
+
+4.1.3c (16/02/04)
+-----
+- added an option about using cartoons (XP style) menu - from user suggestion
+- updated the (in)famous sentences file - from user suggestion
+- fixed some bugs about setting/restoring default values for the file types used by the crawler
+- fixed some internal bugs (exceptions)
+- fixed a bug (exception) with very large tooltip text for the audio player tray icon
+- added support for audio files (.mp3, .wav) coming from .zip files (not sure if bug-free...) - from user suggestion
+- added the title feature on the audio player popup menus
+- changed the loading mode of .dpl file (see the options menu) - from user suggestion
+- fixed some bug about .dpl opening/loading
+
+4.1.3b (09/02/04)
+-----
+- now the add file button works correctly when a .dpl file is added
+- added the unload option (menu, shift+F8) for the current playlist (.dpl) file
+- removing all items from the current playlist file (.dpl) does not reset the .dlp file
+- added the same tooltip info into the audio player popup menu (selecting this entry reloads the current song)
+- added the remove/delete file entries into the audio player popup menu
+- added more randomize options to the playlist
+- speeded up the loading of the playlist
+- fixed a bug about the preview of pictures from a .zip file
+- speeded up the playlist loading from a .zip file
+- hotkey: pressing Esc on the main window minimizes (to taskbak/system tray)
+- hotkey: pressing Shift + Esc restore the main window (as hotkey)
+- it's now possible to delete on the fly the file currently played by the audio player
+- fixed a bug about sub-domains inclusion (not working for domains without "www" prefix)
+- more bug fix into the (audio) playlist
+
+4.1.3a (26/01/04)
+-----
+- added support for icy:// protocol (for the ripper)
+- added support for .inf and .pls script (local) files (for the ripper)
+- changed the format of the .inf file (generated by the ripper), now like .ini files
+- minor bug fixes into the crawler
+- fixed a bug into the playlist popup menu
+- fixed a bug of the 4.1.3(beta) about the "Set as WallPaper" menu entry of the explorer
+- fixed the "Cancel" button bug into the mailer and added a send percentage
+- the mailer now sends all kind of item (except urls)
+- fixed stupid bugs with the timeout field, now allowing until 1440 minutes (1=1 minute, 60=1 hour, 1440=1 day)
+- fixed a bug about function (F1...12) keys.
+- fixed (?) the truncate bug into the nervous (scrolling) title
+- some change into playlist/.zip content loading (now faster?)
+- fixed a bug about hidden add file/dir dialogs with the main window in always on top mode
+- fixed a bug about deleting url/.zip contained items from the playlist
+
+4.1.3(beta) (16/01/04)
+-----
+- fixed a bug about item properties with the preview window
+- fixed a bug with the timeout value for playlist (.dpl) files
+- more bug fixes into the audio playlist
+- added an entry into the shell context menu for audio files - from user suggestion
+- a little (and bugged?) change to the crawler to parse html files without extensions (yes, there are some nice guys doing that...)
+
+4.1.2(beta) (15/12/03)
+-----
+- added support for .zip files (at this time loading only pictures) - from user suggestion
+- fixed some internal bugs about options
+- fixed some bugs (not all...) about rollup button
+
+4.1.1c (09/12/03)
+-----
+- fixed a bug into the crawler about the file/directory mismatch
+
+4.1.1b (01/12/03)
+-----
+- minor changes
+- added an option to the crawler to include sub-domains also
+- more bug fixes into the audio playlist
+- some hotkeys added
+
+4.1.1a (10/11/03)
+-----
+- minor changes
+- some bug fix with audio playlist/popups
+- fixed a bug with the font name for the wallpaper's text
+
+4.1.1(beta) (27/10/03)
+-----
+- added the stream ripper to the crawler
+- fixed (another...) bug into the crawler about the multithread mode
+
+4.0.1a (29/09/03)
+-----
+- changed the distribution file for the source code (all external libraries now comes into a separate file)
+- fixed a bug into the CDA player, unable to skip automatically to the next CD track
+- fixed a bug with the preview window
+- fixed some bugs with the rollup button of the caption bar
+
+4.0.1(beta) (22/09/03)
+-----
+- minor changes
+- added some audio popup, now with the close button
+- added rollup button to the title bar (only when in classic style, not for XP Luna style)
+- changed the main dialog with resizable/snap/etc. styles
+- new toolbar
+- cartoons style (XP Luna) for all controls also if compiling with VC 6.0
+- cartoons menu now enabled
+- added/removed some options
+- added a new preview window
+- general bug fix and code cleaning
+
+3.9.9c (08/09/03)
+-----
+- temporaryly removed the preview check from the main dialog
+- fixed a bug with the playlist loader
+- added some strings to the scrolling title
+- changed the default value for some options
+- general bug fix and code cleaning
+
+3.9.9b (05/09/03)
+-----
+- fixed some of the sync troubles about threads into the crawler
+- general bug fix and code cleaning
+
+3.9.9a (01/09/03)
+-----
+- some code cleaning
+- some (not so little...) bug fix into the crawler
+- changed the 'open report after crawling' code
+- changed process/threads priority (now distiguish)
+- added the default files for aliases (mappings.ini) and cookies (cookies.ini) for the http server
+- removed maplay and amp11 mpeg decoders
+- fixed a bug into the sfx-installer (relpying 'no' to 'would you like run wallpaper now?' does not call wallpaper with the /i option)
+- added the 'force skip existing files (by existence)' option to the crawler, now 'skip existing files' only skips by date/time stamps
+- differentiated the 'no parents/exclude external domains' options by pictures and registered file types into the crawler
+- differentiated the 'no parents/exclude external domains' options by pictures and registered file types into the crawler
+- forgot to mention the new splash screen 
+- forgot to mention some new options (minimize on close window, etc.)
+
+3.9.9 (26/08/03)
+-----
+- some code cleaning
+- changed the html report generated by the crawler, now using .css styles
+- added hotkeys for next/prev picture, song, volume, etc.
+- fixed the process/thread priority
+- fixed a bug when opening an audio file which does not exist
+- fixed a bug about the effect (contrast) to be applied to the picture before displaying it as wallpaper
+- fixed (?) the crawler's bug about directories creation outside the download directory
+- changed the trivial rand() used to randomize the playlist with the MT19937 module by Takuji Nishimura and Makoto Matsumoto
+- fixed a really sucking bug about dragging from the playlist to the explorer's window
+- some bug fix on the playlist
+- some bug fix on the audio player
+- changed the splash and about dialogs
+- added support for .cda files (CD audio tracks) through the MCI api
+- configured through the audioconfig.h file the conditional inclusion of the code for the selected mpeg decoder (excluding other decoders only from compilation, not from the project)
+- changed amp11 with the MAD decoder (http://www.underbit.com/products/mad/), used through the related dll, really an high quality output
+- some bug fix into the crawler
+
+3.9.8
+-----
+- added some classes to retrieve the mp3 header and tags (v1) without the id3lib
+- fixed a bug (memory leak) due to the wrong usage of id3lib, modified the id3lib also (misc_support.cpp/.h) to reduce new/delete overhead
+- changed the (bugged) picture/audio file preview
+- changed the MPEG1,2,3/MAPlay decoder for .mp3 files with the amp11 decoder (http://www1.physik.tu-muenchen.de/~nbeisert/amp11.html)
+
+3.9.7 (last build of)
+------------------
+- WallPaper goes GPL on the sourceforge site, see http://sourceforge.net/projects/crawlpaper/ and http://crawlpaper.sourceforge.net/
