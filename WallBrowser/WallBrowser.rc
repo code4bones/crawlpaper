@@ -1,0 +1,729 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WallBrowser.ico"
+IDI_ICON_HARDDISK       ICON                    "res\\harddisk.ico"
+IDI_ICON_CDROM          ICON                    "res\\cdrom.ico"
+IDI_ICON_FLOPPYDISK     ICON                    "res\\floppy.ico"
+IDI_ICON_FOLDERCLOSED   ICON                    "res\\folderclosed.ico"
+IDI_ICON_FOLDEROPEN     ICON                    "res\\folderopen.ico"
+IDI_ICON_NETDRIVE       ICON                    "res\\netserver.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_DRIVEIMAGES         BITMAP                  "res\\Drives.bmp"
+IDR_SMALLDOC            BITMAP                  "res\\Small.bmp"
+IDR_CURSORTOOLBAR       BITMAP                  "res\\cursortoolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_FILE_DELETE
+    SEPARATOR
+    BUTTON      ID_VIEW_PREVIOUS_PICTURE
+    BUTTON      ID_VIEW_NEXT_PICTURE
+    SEPARATOR
+    BUTTON      ID_TOOLS_SETWALLPAPER
+    BUTTON      ID_TOOLS_RESETWALLPAPER
+    SEPARATOR
+    BUTTON      ID_TOOLS_LIBRARY
+END
+
+IDR_CURSORTOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BUTTON32829
+    BUTTON      ID_BUTTON32830
+    BUTTON      ID_BUTTON32831
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Move File\tCtrl+M",          ID_FILE_MOVE
+        MENUITEM "&Delete File\tCtrl+Del",      ID_FILE_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&View Type..."
+        BEGIN
+            MENUITEM "S&croll",                     ID_VIEW_SCROLL
+            MENUITEM "S&tretch",                    ID_VIEW_STRETCH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Tool&bar",                    ID_VIEW_TOOLBAR
+        MENUITEM "Picture &List Splitter",      ID_VIEW_FILESPLITTER
+        MENUITEM "Directory &Tree Splitter",    ID_VIEW_DIRSPLITTER
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Next Picture\tShift+Right Arrow", ID_VIEW_NEXT_PICTURE
+        MENUITEM "&Previous Picture\tShift+Left Arrow", ID_VIEW_PREVIOUS_PICTURE
+        MENUITEM SEPARATOR
+        MENUITEM "Zoom &In\t+",                 ID_VIEW_ZOOMIN
+        MENUITEM "Zoom &Out\t-",                ID_VIEW_ZOOMOUT
+        MENUITEM "Reset &Zoom\t=",              ID_VIEW_ZOOMRESET
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Set As WallPaper",           ID_TOOLS_SETWALLPAPER
+        MENUITEM "&Reset WallPaper",            ID_TOOLS_RESETWALLPAPER
+    END
+    POPUP "&Image"
+    BEGIN
+        MENUITEM "&Deskew",                     ID_IMAGE_DESKEW
+        POPUP "&Effects"
+        BEGIN
+            MENUITEM "&Blur",                       ID_IMAGE_BLUR
+            MENUITEM "&Despeckle",                  ID_IMAGE_DESPECKLE
+            MENUITEM "&Dilate",                     ID_IMAGE_DILATE
+            MENUITEM "&Edge Enhance",               ID_IMAGE_EDGE_ENHANCE
+            MENUITEM "&Emboss",                     ID_IMAGE_EMBOSS
+            MENUITEM "&Erosion",                    ID_IMAGE_EROSION
+            MENUITEM "&Find Edge",                  ID_IMAGE_FIND_EDGE
+            MENUITEM "&Median",                     ID_IMAGE_MEDIAN
+            MENUITEM "&Mosaic",                     ID_IMAGE_MOSAIC
+            MENUITEM "&Noise",                      ID_IMAGE_NOISE
+            MENUITEM "&Posterize",                  ID_IMAGE_POSTERIZE
+            MENUITEM "&Sharpen",                    ID_IMAGE_SHARPEN
+        END
+        POPUP "&Mirror"
+        BEGIN
+            MENUITEM "&Horizontal",                 ID_IMAGE_MIRROR_H
+            MENUITEM "&Vertical",                   ID_IMAGE_MIRROR_V
+        END
+        POPUP "&Rotate"
+        BEGIN
+            MENUITEM "90º &Left",                   ID_IMAGE_ROTATE_90_LEFT
+            MENUITEM "90º &Right",                  ID_IMAGE_ROTATE_90_RIGHT
+            MENUITEM "&180º",                       ID_IMAGE_ROTATE_180
+        END
+        MENUITEM "&Size",                       ID_IMAGE_SIZE
+    END
+    POPUP "&Color"
+    BEGIN
+        MENUITEM "&Brightness",                 ID_COLOR_BRIGHTNESS
+        MENUITEM "&Contrast",                   ID_COLOR_CONTRAST
+        MENUITEM "&Equalize",                   ID_COLOR_EQUALIZE
+        MENUITEM "&Gamma Correction",           ID_COLOR_GAMMA_CORRECTION
+        MENUITEM "&Grayscale",                  ID_COLOR_GRAYSCALE
+        MENUITEM "&Halftone",                   ID_COLOR_HALFTONE
+        MENUITEM "&Histogram Contrast",         ID_COLOR_HISTOGRAM_CONTRAST
+        MENUITEM "&Hue",                        ID_COLOR_HUE
+        MENUITEM "&Intensity",                  ID_COLOR_INTENSITY
+        MENUITEM "&Intensity Detect",           ID_COLOR_INTENSITY_DETECT
+        MENUITEM "&Invert",                     ID_COLOR_INVERT
+        POPUP "&Saturation"
+        BEGIN
+            MENUITEM "&Horizontal",                 ID_COLOR_SATURATION_H
+            MENUITEM "&Vertical",                   ID_COLOR_SATURATION_V
+        END
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Autosize Columns",           ID_OPTIONS_AUTOSIZECOLS
+        MENUITEM SEPARATOR
+        MENUITEM "&Transparency...",            ID_OPTIONS_TRANSPARENCY
+        MENUITEM SEPARATOR
+        MENUITEM "Draw with Stretch&DIBits",    ID_OPTIONS_DRAWWITHSTRETCHDIBITS
+        MENUITEM "Draw with Stretch&Blt",       ID_OPTIONS_DRAWWITHSTRETCHBLT
+        MENUITEM "Draw with &VideoForWindows API", ID_OPTIONS_DRAWWITHVFW
+        MENUITEM SEPARATOR
+        MENUITEM "&Confirm File Delete",        ID_OPTIONS_CONFIRMFILEDELETE
+        MENUITEM "Delete to &Recycle Bin",      ID_OPTIONS_DELETETORECYCLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDM_FILEPOPUP MENU 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "&Move File\tCtrl+M",          IDM_FILEPOPUP_MOVE
+        MENUITEM "&Delete File\tCtrl+Del",      IDM_FILEPOPUP_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Copy\tCtrl+C",               IDM_FILEPOPUP_COPY
+        MENUITEM "&Paste\tCtrl+V",              IDM_FILEPOPUP_PASTE
+    END
+END
+
+IDM_DIRPOPUP MENU 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "&Delete Directory\tCtrl+Del", IDM_DIRPOPUP_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SIZE DIALOG  0, 0, 210, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WallBrowser"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Image Property ",IDC_STATIC,5,5,200,100
+    LTEXT           "Size",IDC_STATIC,15,25,14,8
+    LTEXT           "Width",IDC_STATIC,55,25,20,8
+    EDITTEXT        IDC_EDIT_WIDTH,80,25,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,105,25,11,12
+    LTEXT           "Height",IDC_STATIC,130,25,22,8
+    EDITTEXT        IDC_EDIT_HEIGHT,155,25,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_HEIGHT,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,180,25,11,12
+    LTEXT           "Radius",IDC_STATIC,55,50,23,8
+    EDITTEXT        IDC_EDIT_RADIUS,80,50,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_RADIUS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | WS_DISABLED,105,50,11,12
+    LTEXT           "radio",IDC_STATIC_RANGE_RADIUS,120,50,28,10
+    LTEXT           "Type",IDC_STATIC,55,75,17,8
+    COMBOBOX        IDC_COMBO,80,75,70,65,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "preserve ratio",IDC_CHECK_SIZE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,5,110,59,10
+    DEFPUSHBUTTON   "&Ok",IDOK,120,110,40,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,165,110,40,14
+END
+
+IDD_DIALOG_ONEPARAM DIALOG  0, 0, 210, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " WallBrowser "
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Property ",IDC_STATIC_PROPERTY,5,5,200,100
+    LTEXT           "Operation",IDC_STATIC_OPERATION,35,30,95,10
+    EDITTEXT        IDC_EDIT_VALUE,140,30,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_VALUE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,160,30,11,12
+    CONTROL         "Slider1",IDC_SLIDER_VALUE,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,30,55,145,20
+    LTEXT           "0",IDC_STATIC_RANGE_MIN,35,75,25,10
+    RTEXT           "100",IDC_STATIC_RANGE_MAX,145,75,25,10
+    DEFPUSHBUTTON   "&OK",IDOK,120,110,40,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,165,110,40,14
+END
+
+IDD_DIALOG_TWOPARAMS DIALOG  0, 0, 210, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " WallBrowser "
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Property ",IDC_STATIC_PROPERTY,5,5,200,100
+    LTEXT           "Static",IDC_STATIC_OPERATION,25,35,80,10
+    EDITTEXT        IDC_EDIT_VALUE,115,35,25,12,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_SPIN_VALUE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,140,35,11,12
+    LTEXT           "Static",IDC_STATIC_SUBOPERATION,25,55,80,10
+    EDITTEXT        IDC_EDIT_SUBVALUE,115,55,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_SUBVALUE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS,140,55,11,12
+    COMBOBOX        IDC_COMBO_SUBVALUE,115,55,50,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&OK",IDOK,120,110,40,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,165,110,40,14
+END
+
+IDD_DIALOG_DUMMY DIALOG  0, 0, 56, 12
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_COMBO_ON_TOOLBAR,0,0,56,90,CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_TRANSPARENCY DIALOG  0, 0, 210, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " WallBrowser "
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        " Transparency ",IDC_STATIC,5,5,200,100
+    CONTROL         "Use the transparency effect:",IDC_CHECK_LAYERED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,20,105,10
+    EDITTEXT        IDC_EDIT_LAYERED,160,20,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_LAYERED,"msctls_updown32",UDS_SETBUDDYINT | UDS_ARROWKEYS | WS_TABSTOP,185,20,11,12
+    LTEXT           "layered min max",IDC_STATIC_LAYERED,29,33,120,8
+    LTEXT           "Note that the transparency effect requires Windows 2000",IDC_STATIC,10,90,190,10
+    DEFPUSHBUTTON   "&OK",IDOK,120,110,40,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,165,110,40,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Nemo me impune lacessit"
+            VALUE "CompanyName", "http://sourceforge.net/users/crawlpaper/"
+            VALUE "FileDescription", "WallBrowser - the smart picture browser"
+            VALUE "FileVersion", "1.9.1"
+            VALUE "InternalName", "WallBrowser"
+            VALUE "LegalCopyright", "Copyright © 1998-2004 Luca Piergentili"
+            VALUE "LegalTrademarks", "licensed under BSD license terms"
+            VALUE "OriginalFilename", "WallBrowser.exe"
+            VALUE "PrivateBuild", "05/03/11"
+            VALUE "ProductName", "WallBrowser - the smart picture browser"
+            VALUE "ProductVersion", "1.9.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_SIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DIALOG_ONEPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DIALOG_TWOPARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_DIALOG_DUMMY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 49
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_DIALOG_TRANSPARENCY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_ZOOM         CURSOR                  "res\\zoom.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "WallBrowser\n\nWallBr\n\n\nWallBrowser.Document\nWallBr Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "WallBrowser"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_STATUS     "???"
+    ID_INDICATOR_RATIO      "100% (stretch)"
+    ID_INDICATOR_INFO       "nnnn x nnnn x nnn colors, nn bpp"
+    ID_INDICATOR_LIBRARY    "graphics library name"
+    ID_INDICATOR_MEM        "nnn.nn bytes"
+    ID_INDICATOR_FILES      "nnnnn file(s)"
+    ID_INDICATOR_PICTURES   "nnnnn picture(s)"
+    ID_INDICATOR_FILENAME   "filename/current operation"
+    ID_INDICATOR_ZOOM       "nn.nn:n"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OPTIONS_CONFIRMFILEDELETE "Confirm File Delete\nConfirm File Delete"
+    ID_OPTIONS_DELETETORECYCLE "Delete to Recycle Bin\nDelete to Recycle Bin"
+    ID_OPTIONS_AUTOSIZECOLS "Autosize columns\nAutosize columns"
+    ID_FILE_DELETE          "Delete the current picture\nDelete"
+    ID_TOOLS_LIBRARY        "Change the library used as the graphics engine\nLibrary"
+    ID_IMAGE_MIRROR_H       "Mirror horizontal\nMirror horizontal"
+    ID_IMAGE_MIRROR_V       "Mirror vertical\nMirror vertical"
+    ID_IMAGE_ROTATE_90_LEFT "Rotate 90º left\nRotate 90º left"
+    ID_IMAGE_ROTATE_90_RIGHT "Rotate 90º right\nRotate 90º right"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_IMAGE_SIZE           "Size\nSize"
+    ID_IMAGE_POSTERIZE      "Posterize\nPosterize"
+    ID_IMAGE_MOSAIC         "Mosaic\nMosaic"
+    ID_IMAGE_BLUR           "Blur\nBlur"
+    ID_IMAGE_MEDIAN         "Median\nMedian"
+    ID_IMAGE_SHARPEN        "Sharpen\nSharpen"
+    ID_IMAGE_DESPECKLE      "Despeckle\nDespeckle"
+    ID_IMAGE_NOISE          "Noise\nNoise"
+    ID_IMAGE_EMBOSS         "Emboss\nEmboss"
+    ID_IMAGE_EDGE_ENHANCE   "Edge Enhance\nEdge Enhance"
+    ID_IMAGE_EROSION        "Erosion\nErosion"
+    ID_IMAGE_DILATE         "Dilate\nDilate"
+    ID_VIEW_NEXT_PICTURE    "Load the next picture from the list\nNext"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_PREVIOUS_PICTURE 
+                            "Load the previous picture from the list\nPrevious"
+    ID_VIEW_DIRSPLITTER     "Show or hide the directory tree pane\nDirectory Split"
+    ID_TOOLS_SETWALLPAPER   "Set the picture as the current wallpaper\nWallpaper"
+    ID_TOOLS_RESETWALLPAPER "Remove the current wallpaper\nRemove Wallpaper"
+    ID_IMAGE_FIND_EDGE      "Find Edge\nFind Edge"
+    ID_OPTIONS_DRAWWITHVFW  "Draw with VideoForWindows API\nVideoForWindows API"
+    ID_OPTIONS_DRAWWITHSTRETCHDIBITS "Draw with StretchDIBits\nStretchDIBits"
+    ID_OPTIONS_DRAWWITHSTRETCHBLT "Draw with StretchBlt\nStretchBlt"
+    ID_OPTIONS_TRANSPARENCY "Set the transparency value\nTransparency"
+    ID_VIEW_STRETCH         "Switch to the Stretching mode\nToggle View Type"
+    ID_VIEW_SCROLL          "Switch to the Scrolling mode\nToggle View Type"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_QUESTION_FILEDELETE "Are you sure you want to delete %s ?"
+    IDS_QUESTION_DIRDELETE  "Are you sure you want to delete %s and all its content ?"
+    IDS_QUESTION_SAVECHANGES 
+                            "The picture %s has been modified, would you like to save changes ?"
+    IDS_QUESTION_LAYERED    "The current transparency value for the main dialog (%d, where the range goes from %d to %d) causes the dialog to be almost invisible.\n\nAre you sure you want to use such value ?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_FILESAVE      "Unable to save %s."
+    IDS_ERROR_UNDOSTACKFULL "The stack for the undo is full. This means that no undo will be available for the operations you do.\nWould you like to continue with the current operation ?"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_ZOOMIN          "Zoom in the view\nZoom in"
+    ID_VIEW_ZOOMOUT         "Zoom out the view\nZoom out"
+    ID_VIEW_ZOOMRESET       "Reset the zoom on the view\nReset zoom"
+    ID_VIEW_FILESPLITTER    "Show or hide the picture list pane\nPicture Split"
+    ID_FILE_MOVE            "Move the current picture\nMove"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_IMAGE_ROTATE_180     "Rotate 180º\nRotate 180º"
+    ID_IMAGE_DESKEW         "Deskew\nDeskew"
+    ID_COLOR_HALFTONE       "Halftone\nHalftone"
+    ID_COLOR_GRAYSCALE      "Grayscale\nGrayscale"
+    ID_COLOR_INVERT         "Invert\nInvert"
+    ID_COLOR_BRIGHTNESS     "Brightness\nBrightness"
+    ID_COLOR_CONTRAST       "Contrast\nContrast"
+    ID_COLOR_HUE            "Hue\nHue"
+    ID_COLOR_SATURATION_H   "Saturation horizontal\nSaturation horizontal"
+    ID_COLOR_SATURATION_V   "Saturation vertical\nSaturation vertical"
+    ID_COLOR_EQUALIZE       "Equalize\nEqualize"
+    ID_COLOR_HISTOGRAM_CONTRAST "Histogram Contrast\nHistogram Contrast"
+    ID_COLOR_INTENSITY      "Intensity\nIntensity"
+    ID_COLOR_GAMMA_CORRECTION "Gamma Correction\nGamma Correction"
+    ID_COLOR_INTENSITY_DETECT "Intensity Detect\nIntensity Detect"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Castilian) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\WallBrowser.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish (Castilian) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\WallBrowser.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
