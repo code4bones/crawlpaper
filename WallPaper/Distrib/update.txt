@@ -1,0 +1,15 @@
+[WallPaper]
+LastVersion=4.2.4
+VersionType=
+LastUpdate=10/04/2011
+Notes=
+
+[Web]
+WebSite=http://sourceforge.net/projects/crawlpaper/
+HomePage=http://sourceforge.net/projects/crawlpaper/
+MailTo=lpiergentili@yahoo.com
+
+[Download]
+Total=1
+Mirror1=http://downloads.sourceforge.net/project/crawlpaper/crawlpaper/4.2.4/;U.S.;1
+FileName1=wallpaper-fullbin.4.2.4.zip

@@ -1,0 +1,80 @@
+body
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font-size: 8.0pt;
+	color: black;
+	background: url(pattern.gif);
+}
+
+p
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font-size: 8.0pt;
+	color: black;
+	background-color: transparent;
+}
+
+p.red
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 8.0pt;
+	color: red;
+	background-color: transparent;
+}
+
+p.green
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 8.0pt;
+	color: green;
+	background-color: transparent;
+}
+
+p.blue
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 8.0pt;
+	color: blue;
+	background-color: transparent;
+}
+
+p.bold
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 8.0pt;
+	color: black;
+	background-color: transparent;
+}
+
+p.xbold
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: bold;
+	font-size: 8.0pt;
+	color: maroon;
+	background-color: transparent;
+}
+
+a
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font-size: 8.0pt;
+	color: #FF9600;
+	text-decoration: none;
+}
+
+a:hover
+{
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-weight: normal;
+	font-size: 8.0pt;
+	color: #4040FF;
+	text-decoration: underline;
+}
